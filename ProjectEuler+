@@ -1,0 +1,44 @@
+#!/bin/python3
+
+import sys
+
+### Project Euler #1: Multiples of 3 and 5
+
+# My solution
+
+t = int(input().strip())
+if t >= 0 and t <= 10**5:
+    for a0 in range(t):
+        n = int(input().strip())
+        list0 = []
+		if n >= 0 and n <= 10**9:
+			for i in range(1,n):
+				if i % 3 == 0:
+					list0.append(i)
+				elif i % 5 == 0:
+					list0.append(i)
+			print(sum(list0))
+
+# Note: Not as effective. Failed 2 out of 6 cases. Need to improve runtime and comprehension. Will update later on.
+
+### Project Euler #2: Even Fibonacci numbers
+
+# My solution
+
+t = int(input().strip())
+for a0 in range(t):
+    n = int(input().strip())
+    list0 = []
+    n1 = 0
+    n2 = 1
+    count = -1
+    while count < n:
+        nth = n1 + n2
+        n1 = n2
+        n2 = nth
+        if count % 3 == 0 and nth < n:
+            list0.append(nth)
+        count += 1
+    print(sum(list0))
+	
+# Note: Not as effective. Failed 3 out of 5 cases. Need to improve runtime and comprehension. Will update later on.
